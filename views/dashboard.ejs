@@ -7,10 +7,16 @@
 <body>
 
     <h2>Welcome, <%= user.name %>!</h2>
-    <p>You are logged in.</p>
+    <p>You are logged in securely.</p>
+    <p>Role: <%= user.role %></p>
 
     <a href="/booking">Make a Booking</a>
     <a href="/mybookings">My Bookings</a>
+
+    <% if (user.role === 'admin') { %>
+        <a href="/admin">Admin Dashboard</a>
+    <% } %>
+
     <a href="/logout">Logout</a>
 
 </body>

@@ -1,4 +1,4 @@
-/* Background + Fade Animation */
+/* Global */
 body {
     font-family: 'Arial', sans-serif;
     background: #000000;
@@ -8,7 +8,7 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Gold Neon Buttons */
+/* Links / Buttons */
 a {
     display: inline-block;
     padding: 12px 28px;
@@ -24,7 +24,6 @@ a {
     overflow: hidden;
 }
 
-/* Animated Gold Border Shine */
 a::before {
     content: "";
     position: absolute;
@@ -42,7 +41,6 @@ a::before {
     transition: 0.5s;
 }
 
-/* Hover Effects */
 a:hover {
     background: #f5d67b;
     color: #000;
@@ -54,19 +52,86 @@ a:hover::before {
     top: 100%;
 }
 
-/* Animated Heading */
+/* Headings */
 h2 {
     animation: slideDown 0.8s ease-out;
     text-shadow: 0 0 15px #f5d67b;
 }
 
-/* Fade-in animation */
+/* Forms */
+form {
+    display: inline-block;
+    background: rgba(245, 214, 123, 0.05);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #f5d67b;
+    box-shadow: 0 0 15px #f5d67b;
+    margin-top: 20px;
+}
+
+input, select {
+    width: 260px;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #f5d67b;
+    background: #111;
+    color: #f5d67b;
+    box-shadow: 0 0 10px #f5d67b;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    background: #f5d67b;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #f5d67b;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #fff;
+    box-shadow: 0 0 25px #fff;
+}
+
+/* Cards */
+.card,
+.booking-card,
+.admin-card {
+    display: inline-block;
+    min-width: 260px;
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #f5d67b;
+    box-shadow: 0 0 15px #f5d67b;
+    background: rgba(245, 214, 123, 0.03);
+}
+
+/* Messages */
+.error {
+    color: #ff4d4d;
+    text-shadow: 0 0 10px #ff4d4d;
+    margin-top: 10px;
+}
+
+.success {
+    color: #7CFC00;
+    text-shadow: 0 0 10px #7CFC00;
+    margin-top: 10px;
+}
+
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0 }
     to { opacity: 1 }
 }
 
-/* Slide-down animation */
 @keyframes slideDown {
     from { transform: translateY(-20px); opacity: 0 }
     to { transform: translateY(0); opacity: 1 }
