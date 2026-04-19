@@ -34,5 +34,60 @@ This project portrays good coding practices, authentication, role-based access c
 - Express-Session
 - bcrypt
 - Connection Pooling
+Project Structure
+booking-system/
+│── app.js
+│── package.json
+│── public/
+│── views/
+│   ├── login.ejs
+│   ├── register.ejs
+│   ├── dashboard.ejs
+│   ├── booking.ejs
+│   ├── mybookings.ejs
+│   ├── editbooking.ejs
+│   └── admin.ejs
+│── .env (not included)
+Running the Project
+Install dependencies:
+npm install
+Start the server:
+node app.js
+Open in browser:
+http://localhost:3000
 
-📂 Project Structure
+ Environment Variables
+Create a `.env` file with:
+SESSION_SECRET=yourSecretKey
+
+ Database Structure
+ users table
+id (INT, Primary Key)
+name (VARCHAR)
+email (VARCHAR, UNIQUE)
+password (VARCHAR)
+role (VARCHAR)
+
+ bookings table
+id (INT, Primary Key)
+user_id (INT, Foreign Key)
+date (DATE)
+time (TIME)
+service (VARCHAR)
+## Demo Video (CA Requirement)
+
+The demo video will demonstrate:
+- User registration and login
+- Creating a booking
+- Viewing bookings
+- Editing a booking
+- Deleting a booking
+- Admin dashboard features
+- Security features (validation, sessions, role-based access)
+- Code explanation
+
+  Author
+Syed Junaid Ali  
+MSc Cybersecurity – National College of Ireland
+student id X25172735
+
